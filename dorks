@@ -1,0 +1,19 @@
+http://ssl.cert.subject.CN:"*.target. com" http.title:"index of/"
+
+http://ssl.cert.subject.CN:"*.target. com" http.title:"gitlab"
+
+http://ssl.cert.subject.CN:"*.wur.nl" http.title:"gitlab"
+
+http://ssl.cert.subject.CN:"*.target. com" "230 login successful" port:"21"
+
+http://ssl.cert.subject.CN:"*.gov.in"+200 http.title:"Admin" 
+
+*For Gitlab exploit : https://git.any. Com/api/v4/users/number_here
+
+http.title:"phpinfo()" ssl:"*.company.com"
+
+http://ssl.cert.subject.CN:"*.target. com" sometime does not include results exactly like http://ssl.cert.subject.CN:"*.target. com" http.title:"gitlab"?
+
+html:"There isn’t a GitHub Pages site here." 
+
+You can also take a look at facet analysis and filter out interesting thing e.g - https://www.shodan .io/search/facet?query=http://ssl.cert.subject.CN%3ATarget&facet=http.component
