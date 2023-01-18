@@ -17,3 +17,7 @@ http://ssl.cert.subject.CN:"*.target. com" sometime does not include results exa
 html:"There isn’t a GitHub Pages site here." 
 
 You can also take a look at facet analysis and filter out interesting thing e.g - https://www.shodan .io/search/facet?query=http://ssl.cert.subject.CN%3ATarget&facet=http.component
+
+
+"submit vulnerability report" | "powered by bugcrowd" | "powered by hackerone" -inurl:news -site:*.de
+
