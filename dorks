@@ -19,5 +19,11 @@ html:"There isn’t a GitHub Pages site here."
 You can also take a look at facet analysis and filter out interesting thing e.g - https://www.shodan .io/search/facet?query=http://ssl.cert.subject.CN%3ATarget&facet=http.component
 
 
+for shodan
+Ssl.cert.subject.CN:"target" 200
+ssl:”target Inc.”
+ssl:”target Inc.” 200
+Ssl.cert.subject.CN:"target.com" 200
+
 "submit vulnerability report" | "powered by bugcrowd" | "powered by hackerone" -inurl:news -site:*.de
 
