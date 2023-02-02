@@ -18,12 +18,104 @@ html:"There isn’t a GitHub Pages site here."
 
 You can also take a look at facet analysis and filter out interesting thing e.g - https://www.shodan .io/search/facet?query=http://ssl.cert.subject.CN%3ATarget&facet=http.component
 
+Google Dorks - Cloud Storage:
+
+site:http://s3.amazonaws.com "target[.]com"
+site:http://blob.core.windows.net "target[.]com"
+site:http://googleapis.com "target[.]com"
+site:http://drive.google.com "target[.]com"
+
 
 for shodan
-Ssl.cert.subject.CN:"target" 200
-ssl:”target Inc.”
-ssl:”target Inc.” 200
-Ssl.cert.subject.CN:"target.com" 200
+- Ssl.cert.subject.CN:"target" 200
+- ssl:”target Inc.”
+- ssl:”target Inc.” 200
+- Ssl.cert.subject.CN:"target.com" 200
+- http.html:"xoxb-"
+- Find all jenkins server : http.favicon.hash:81586312 (hashes for server -https://github.com/sansatart/scrapts/blob/master/shodan-favicon-hashes.csv)
+- http.title:"Grafana"
+- ex - SSH on port 22 or 3333 
+ ssh port:22,3333
+or 
+ proftpd port:21
+
+ You can use this to find services on non-standard port. 
+
+ Like : ssh -port:22
+
+ ssh which is not on port 22
+ 
+ 
+ 
+ Shodan Dorks for Finding Sensitive  Data
+
+"MongoDB Server Information" port:27017 -authentication
+
+"Set-Cookie: mongo-express=" "200 OK"
+
+mysql port:"3306"
+
+port:"9200" all:"elastic indices"
+
+port:5432 PostgreSQL
+
+proftpd port:21
+
+ 
+ "220" "230 Login successful." port:21
+
+openssh port:22
+
+port:"23"
+
+port:"25" product:"exim"
+
+port:"11211" product:"Memcached"
+
+"X-Jenkins" "Set-Cookie: JSESSIONID" http.title:"Dashboard"
+
+"port: 53" Recursion: Enabled
+
+port:8291 os:"MikroTik RouterOS 6.45.9"
+
+product:"Apache httpd" port:"80"
+
+product:"Microsoft IIS httpd"
+
+product:"nginx"
+
+"port: 8080" product:"nginx"
+
+"authentication disabled" "RFB 003.008"
+
+"Authentication: disabled" port:445
+
+"X-Plex-Protocol" "200 OK" port:32400
+
+"220" "230 Login successful." port:21
+
+
+
 
 "submit vulnerability report" | "powered by bugcrowd" | "powered by hackerone" -inurl:news -site:*.de
+
+
+-> "root@" port:23 -login -password -name -Session
+-> title:"citrix gateway"
+->  "\x03\x00\x00\x0b\x06\xd0\x00\x00\x124\x00" (Windows RDP Passwords)
+-> x-jenkins 200
+-> http.html:"* The wp-config.php creation script uses this file"
+
+links for sahodan dorks:
+https://twitter.com/0xhunster/status/1548382647759491074
+https://securitytrails.com/blog/top-shodan-dorks
+https://github.com/iGotRootSRC/Dorkers
+
+
+
+site:.s3.amazonaws.com "company"
+
+github: -
+https://github.com/techgaun/github-dorks/blob/master/github-dorks.txt
+
 
