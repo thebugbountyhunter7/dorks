@@ -121,3 +121,7 @@ github: -
 https://github.com/techgaun/github-dorks/blob/master/github-dorks.txt
 
 
+to use it manually through cmd use this:-
+shodan search --limit 1000 "ssl.cert.subject.CN:<domain>" --fields ip_str | awk '{print $1}' > <output_file>
+
+
